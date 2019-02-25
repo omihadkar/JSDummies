@@ -1,1 +1,4 @@
 *.pyc
+
+# ignore folders
+node_modules/
