@@ -3,9 +3,10 @@ var express= require('express');
 var todoController= require('./Controller/todoController');
 
 var app= express();
-var bodyParser= require('body-parser');
 
-app.use(bodyParser.json({ type: 'application/*+json' }))
+var bodyParser= require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json());
 
 todoController(app);
 

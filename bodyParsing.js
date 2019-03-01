@@ -12,6 +12,7 @@ app.use(bodyParser.json())
 app.use(function (req, res) {
   res.setHeader('Content-Type', 'text/plain')
   res.write('you posted:\n')
+  console.log(req.body);
   res.end(JSON.stringify(req.body, null, 2))
 });
 
